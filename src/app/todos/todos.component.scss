@@ -1,0 +1,145 @@
+.heading-section {
+  background: linear-gradient(to right, rgb(2, 228, 171), rgb(74, 215, 240));
+
+  padding: 100px;
+  padding-bottom: 150px;
+
+  h1.title {
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 1px 2px rgba($color: black, $alpha: 0.12);
+  }
+}
+.container {
+  max-width: 800px;
+}
+
+.add-todo-box {
+  padding: 25px;
+  background: white;
+  border-radius: 4px;
+  margin-top: -68px;
+  box-shadow: 0 4px 12px rgba(black, 0.08);
+}
+
+// alligned todo item font.
+.todo-item {
+  display: flex;
+  // Alligned tick icon to centre of text.
+  align-items: center;
+
+  cursor: pointer;
+  font-size: 18px;
+  // Created space between each task/todo item. (Top and bottom has 35 px space, left and right has 20px.
+  padding: 35px 20px;
+  // Created line between items.
+  border-bottom: 1px solid #f2f3f5;
+  // For when an element has a todo task & is completed...
+  &.completed {
+    color: #aaa;
+  }
+}
+
+// Decided not to nest for clearer and less messy code.
+.todo-item .check-box {
+  display: flex;
+  // Added flex-shrink to make the circle round instead of oval. The above code was automatically reforming to the amount of text inside the textbox.
+  flex-shrink: 0;
+
+  border: 2px solid #eee;
+  border-radius: 50%;
+
+  margin-right: 30px;
+
+  height: 28px;
+  width: 28px;
+
+  transition: background-color 0.2s;
+  // Targeted material item inside checkbox.
+  i.material-icons {
+    font-size: 20px;
+    margin: auto;
+    color: #333;
+    // Hide by default.
+    opacity: 0;
+
+    transition: opacity 0.2s;
+  }
+}
+// inital hover for check/tick
+// &:hover {
+//   i.material-icons {
+//     opacity: 1;
+//   }
+// }
+
+// Have put checkbox inside the todo item.
+// Have put the element that has the class of todo-item (in a hover state).
+// Targeting the element that has the checkbox class.
+// Then icon is added.
+// Background added on hover.
+.todo-item:hover .check-box {
+  background: #eee;
+  i.material-icons {
+    opacity: 0.28;
+  }
+}
+.todo-item.completed .check-box {
+  background: rgb(11, 223, 170);
+  border-color: rgb(11, 223, 170);
+  i.material-icons {
+    opacity: 1;
+  }
+}
+
+// ERROR WITH CONTROLS PANEL - UPDATE - solved!! (each icon was in seperate containers named todo-controls-box, they should have been in one.)
+// Styling control pannel that's within the todo task. Struggling to chose the right styling for positioning to bottom right.
+.todo-item .todo-controls-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+// Tried to creat hover so controls panel only shows on hover.
+// .todo.item:hover .todo-controls-box {
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+.todo-controls-box .todo-control-button {
+  display: flex;
+  background: #f5f7f8;
+
+  // Rounded grey background edges.
+  border-radius: 7px;
+
+  padding: 7px 10px;
+
+  i.material-icons {
+    color: #555;
+    font-size: 15px;
+  }
+  &:hover {
+    background: #eee;
+    i.material-icons {
+      color: #333;
+    }
+  }
+
+  &:active {
+    background: #e5e7e8;
+  }
+  // Targeting first child of element (edit icon).
+  // ERROR: Trying to curve only the outer edges. Hasn't worked...
+  &:first-of-type {
+    border-top-left-radius: 7px;
+  }
+  &:last-of-type {
+    border-top-right-radius: 7px;
+  }
+}
+
+// ERROR tried creating red warning for trash/delete button - not functioning ATM.
+.todo-controls-box .todo-control-button.is-danger:active {
+  color: rgb(155, 27, 27);
+}
