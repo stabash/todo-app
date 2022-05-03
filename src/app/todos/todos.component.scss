@@ -28,6 +28,8 @@
   // Alligned tick icon to centre of text.
   align-items: center;
 
+  position: relative;
+
   cursor: pointer;
   font-size: 18px;
   // Created space between each task/todo item. (Top and bottom has 35 px space, left and right has 20px.
