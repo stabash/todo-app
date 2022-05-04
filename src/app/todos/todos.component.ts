@@ -18,5 +18,7 @@ export class TodosComponent implements OnInit {
   onFormSubmit(form: NgForm) {
     console.log('FORM SUBMITTED');
     console.log(form);
+
+    this.dataService.addTodo(new Todo(form.value.text));
   }
 }
