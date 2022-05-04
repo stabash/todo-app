@@ -16,6 +16,7 @@ export class TodosComponent implements OnInit {
     this.todos = this.dataService.getAllTodos();
   }
   onFormSubmit(form: NgForm) {
+    if (form.invalid) return alert('Form is invalid');
     console.log('FORM SUBMITTED');
     console.log(form);
 
