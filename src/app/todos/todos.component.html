@@ -29,7 +29,7 @@
 <section class="section">
   <div class="container">
     <div class="todo-list">
-      <div class="todo-item completed">
+      <div class="todo-item completed" *ngFor="let todo of todos">
         <div class="check-box">
           <i class="material-icons">done</i>
         </div>
