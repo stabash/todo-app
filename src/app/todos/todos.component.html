@@ -29,12 +29,18 @@
 <section class="section">
   <div class="container">
     <div class="todo-list">
-      <div class="todo-item completed" *ngFor="let todo of todos">
+      <div
+        class="todo-item"
+        *ngFor="let todo of todos"
+        [class.completed]="todo.completed"
+      >
         <div class="check-box">
           <i class="material-icons">done</i>
         </div>
         <!-- seperate DIV for checkbox text. -->
-        <div class="todo-text">Attend Your Step internship interview</div>
+        <div class="todo-text">
+          {{ todo.text }}
+        </div>
         <div class="todo-controls-box">
           <div class="todo-control-button">
             <i class="material-icons">edit</i>
