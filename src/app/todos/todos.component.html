@@ -28,12 +28,14 @@
           </button>
         </p>
       </div>
-      <p class="help is-danger" *ngIf="todoTextField.invalid">
-        Please enter the text of your todo
-      </p>
-      <p class="help is-danger" *ngIf="todoTextField.invalid">
-        Todo text must be at least 2 characters long
-      </p>
+      <div *ngIf="todoTextField.invalid">
+        <p class="help is-danger" *ngIf="todoTextField.invalid">
+          Please enter the text of your todo
+        </p>
+        <!-- <p class="help is-danger" *ngIf="todoTextField.errors.minlength">
+          Todo text must be at least 2 characters long
+        </p> -->
+      </div>
     </form>
   </div>
 </div>
