@@ -45,7 +45,7 @@
   <div class="container">
     <div class="todo-list">
       <!-- New todo item component tag. -->
-      <app-todo-item *ngFor="let todo of todos"></app-todo-item>
+      <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
     </div>
   </div>
 </section>
