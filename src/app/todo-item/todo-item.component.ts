@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from '../shared/todo.model';
 
 @Component({
@@ -7,6 +7,7 @@ import { Todo } from '../shared/todo.model';
   styleUrls: ['./todo-item.component.scss'],
 })
 export class TodoItemComponent implements OnInit {
+  @Input()
   todo!: Todo;
   constructor() {}
 
