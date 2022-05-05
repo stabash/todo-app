@@ -19,8 +19,8 @@ export class TodosComponent implements OnInit {
     this.todos = this.dataService.getAllTodos();
   }
   onFormSubmit(form: NgForm) {
-    console.log('FORM SUBMITTED');
-    console.log(form);
+    // console.log('FORM SUBMITTED');
+    // console.log(form);
 
     // ERROR WITH ERROR DISPLAY:
     // if (form.invalid) return this.showValidationErrors = true;
@@ -28,5 +28,9 @@ export class TodosComponent implements OnInit {
     this.dataService.addTodo(new Todo(form.value.text));
 
     form.reset();
+  }
+
+  onTodoClicked() {
+    // Set todo to completed
   }
 }
