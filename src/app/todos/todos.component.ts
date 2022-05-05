@@ -29,4 +29,7 @@ export class TodosComponent implements OnInit {
 
     form.reset();
   }
+  onTodoClicked() {
+    alert('todo was clicked');
+  }
 }
