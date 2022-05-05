@@ -12,4 +12,8 @@ export class TodoItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onTodoClicked() {
+    console.log('Todo was clicked');
+  }
 }
