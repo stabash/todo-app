@@ -13,8 +13,7 @@ export class TodoItemComponent implements OnInit {
   @Output()
   todoClicked: EventEmitter<void> = new EventEmitter();
   @Output()
-  editClicked: EventEmitter<void> = new EventEmitter();
-
+  deleteClicked: EventEmitter<void> = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
@@ -23,7 +22,7 @@ export class TodoItemComponent implements OnInit {
     this.todoClicked.emit();
   }
 
-  onEditClicked() {
-    this.editClicked.emit();
+  onDeleteClicked() {
+    this.deleteClicked.emit();
   }
 }
