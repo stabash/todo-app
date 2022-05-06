@@ -29,7 +29,7 @@ export class TodosComponent implements OnInit {
 
     form.reset();
   }
-  onTodoClicked() {
-    alert('todo was clicked');
+  toggleCompleted(todo: Todo) {
+    todo.completed = !todo.completed;
   }
 }
