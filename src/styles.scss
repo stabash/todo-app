@@ -3,6 +3,15 @@
 // imported Bulma or styling
 @import "../node_modules/bulma/bulma.sass";
 
+// Auto Angular Material input.
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
 // Global style for buttons.
 .alt-gradient-button {
   border: none;
