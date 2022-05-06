@@ -12,6 +12,8 @@ export class TodoItemComponent implements OnInit {
   todo!: Todo;
   @Output()
   todoClicked: EventEmitter<void> = new EventEmitter();
+  @Output()
+  editClicked: EventEmitter<void> = new EventEmitter();
 
   constructor() {}
 
@@ -19,5 +21,9 @@ export class TodoItemComponent implements OnInit {
 
   onTodoClicked() {
     this.todoClicked.emit();
+  }
+
+  onEditClicked() {
+    this.editClicked.emit();
   }
 }
