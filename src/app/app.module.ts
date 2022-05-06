@@ -8,9 +8,17 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [AppComponent, TodosComponent, TodoItemComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+
 import { DataService } from '../shared/data.service';
 import { Todo } from '../shared/todo.model';
 @Component({
@@ -13,7 +15,7 @@ export class TodosComponent implements OnInit {
   // ERROR WITH ERROR DISPLAY:
   //  showValidationErrors!: boolean;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.todos = this.dataService.getAllTodos();
