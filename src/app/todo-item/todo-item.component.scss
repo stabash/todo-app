@@ -118,6 +118,9 @@
 }
 
 // ERROR - tried creating a red warning for when delete icon is hovered over but not functioning.
-.todo-controls-box .todo-control-button.is-danger:active {
-  background: rgb(155, 27, 27);
+.todo-controls-box .todo-control-button.is-danger:hover i.material-icons {
+  color: rgb(255, 0, 0);
+}
+.todo-controls-box .todo-control-button.is-danger:active i.material-icons {
+  color: rgb(255, 0, 0);
 }
