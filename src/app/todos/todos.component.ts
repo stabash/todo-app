@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -34,14 +35,18 @@ export class TodosComponent implements OnInit {
   toggleCompleted(todo: Todo) {
     todo.completed = !todo.completed;
   }
-
-  editTodo(todo: Todo) {
-    // We need
-    // - index of todo
-    // - user needs to enter new information
-
+  deleteTodo(todo: Todo) {
     const index = this.todos.indexOf(todo);
-
-    // this.dataService.updateTodo()
+    this.dataService.deleteTodo(index);
   }
 }
+
+// EDIT TODO DRAFT CODE.
+// editTodo(todo: Todo) {
+//   // We need
+//   // - index of todo
+//   // - user needs to enter new information
+
+//   const index = this.todos.indexOf(todo);
+
+//   // this.dataService.updateTodo()
